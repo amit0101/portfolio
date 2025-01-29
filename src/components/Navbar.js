@@ -21,7 +21,6 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
         </li>
       </ul>
 
-      {/* Toggle button at bottom of the sidebar */}
       <button className="theme-toggle" onClick={handleToggle}>
         {isDarkMode ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
       </button>

@@ -44,10 +44,13 @@
 }
 
 .navbar {
+  display: flex;
+  flex-direction: column;   /* stack nav items + button */
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 250px;
   background-color: var(--primary-color);
   padding: 1rem;
-  transition: background-color var(--transition-speed) ease;
 }
 
 /* Sidebar text and links */
@@ -64,10 +67,19 @@
   /* You can also apply accent colors on hover if you like */
 }
 
-/* Toggle Button styles (bottom of navbar) */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  margin: 0.5rem 0; /* spacing between items */
+}
+
+/* This places the toggle button at the bottom of the sidebar */
 .theme-toggle {
-  margin-top: 2rem;
-  padding: 0.5rem;
+  margin-top: auto;        /* push the button to the bottom */
+  padding: 0.5rem 1rem;
   background-color: var(--secondary-color);
   color: #fff;
   border: none;
