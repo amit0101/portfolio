@@ -14,11 +14,12 @@
 
 /* Light Theme: “Minimal & Modern” */
 .light-theme {
-  --bg-color: #F9FAFB;       /* background */
-  --primary-color: #1F2937;  /* e.g., text or nav color */
-  --secondary-color: #3B82F6;/* accent (blue) */
-  --accent-color: #34D399;   /* accent (green) */
-  --text-color: #111827;     /* main text color */
+  --bg-color: #F9FAFB;
+  --primary-color: #1F2937;
+  --secondary-color: #3B82F6;
+  --accent-color: #34D399;
+  --text-color: #111827;  /* used in main content */
+  --nav-text-color: #F9FAFB; /* new var for sidebar text */
 }
 
 /* Dark Theme: “Sophisticated Dark Mode” */
@@ -53,18 +54,12 @@
   padding: 1rem;
 }
 
-/* Sidebar text and links */
+/* In .navbar, use --nav-text-color for link and h1, etc. */
 .navbar h1,
 .navbar a,
 .navbar p {
-  color: var(--text-color);
-}
-
-.navbar a {
-  text-decoration: none;
-  display: block;
-  margin: 0.5rem 0;
-  /* You can also apply accent colors on hover if you like */
+  color: var(--nav-text-color, var(--text-color));
+  /* ^ fallback to --text-color if --nav-text-color not set */
 }
 
 .navbar ul {
