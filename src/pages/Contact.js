@@ -8,8 +8,7 @@ function Contact() {
         Email: <a href="mailto:amit.kr.py@gmail.com">amit.kr.py@gmail.com</a>
       </p>
       <p>
-        LinkedIn:
-        <a
+        LinkedIn: <a
           href="https://linkedin.com/in/amitkrpy"
           target="_blank"
           rel="noreferrer"
@@ -18,8 +17,7 @@ function Contact() {
         </a>
       </p>
       <p>
-        GitHub:
-        <a
+        GitHub: <a
           href="https://github.com/amit0101"
           target="_blank"
           rel="noreferrer"
