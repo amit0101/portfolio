@@ -9,7 +9,7 @@ function Navbar() {
         <li>
           {/* “/” → About Me */}
           <NavLink
-            to="/"
+            to="/about"
             style={{ display: 'block', margin: '0.5rem 0' }}
           >
             About Me
