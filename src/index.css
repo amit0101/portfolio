@@ -1,35 +1,83 @@
+/* index.css (partial) */
+
+/* Global resets or custom styles can go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base variables for shared properties, if any */
+:root {
+  --transition-speed: 0.3s;
+}
+
+/* Light Theme: “Minimal & Modern” */
+.light-theme {
+  --bg-color: #F9FAFB;       /* background */
+  --primary-color: #1F2937;  /* e.g., text or nav color */
+  --secondary-color: #3B82F6;/* accent (blue) */
+  --accent-color: #34D399;   /* accent (green) */
+  --text-color: #111827;     /* main text color */
+}
+
+/* Dark Theme: “Sophisticated Dark Mode” */
+.dark-theme {
+  --bg-color: #21252B;       /* background */
+  --primary-color: #282C34;  /* primary bar color */
+  --secondary-color: #61DAFB;/* accent (blue) */
+  --accent-color: #E06C75;   /* accent (red) */
+  --text-color: #FFFFFF;     /* text */
+}
+
+/* Now style the app container and child elements using these vars */
 .app-container {
   display: flex;
-  min-height: 100vh; /* optional */
+  min-height: 100vh;
   font-family: sans-serif;
-  margin: 0;
+
+  /* Apply background and text color from CSS variables */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
 }
 
-/* Left nav */
 .navbar {
   width: 250px;
-  background-color: #222;
-  color: #fff;
+  background-color: var(--primary-color);
   padding: 1rem;
+  transition: background-color var(--transition-speed) ease;
 }
 
-/* Right content area */
+/* Sidebar text and links */
+.navbar h1,
+.navbar a,
+.navbar p {
+  color: var(--text-color);
+}
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+  /* You can also apply accent colors on hover if you like */
+}
+
+/* Toggle Button styles (bottom of navbar) */
+.theme-toggle {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed) ease;
+}
+
+/* Right content container */
 .content-container {
   flex: 1;
   padding: 1rem;
-}
-
-/* Simple link styling */
-.navbar a {
-  color: #bbb;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  color: #fff;
-}
-
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
 }

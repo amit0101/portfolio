@@ -1,37 +1,30 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ isDarkMode, setIsDarkMode }) {
+  const handleToggle = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   return (
     <nav className="navbar">
       <h1>Amit Kumar</h1>
       <ul>
         <li>
-          {/* “/” → About Me */}
-          <NavLink
-            to="/"
-            style={{ display: 'block', margin: '0.5rem 0' }}
-          >
-            About Me
-          </NavLink>
+          <NavLink to="/">About Me</NavLink>
         </li>
         <li>
-          <NavLink
-            to="/projects"
-            style={{ display: 'block', margin: '0.5rem 0' }}
-          >
-            Projects
-          </NavLink>
+          <NavLink to="/projects">Projects</NavLink>
         </li>
         <li>
-          <NavLink
-            to="/contact"
-            style={{ display: 'block', margin: '0.5rem 0' }}
-          >
-            Contact
-          </NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
+
+      {/* Toggle button at bottom of the sidebar */}
+      <button className="theme-toggle" onClick={handleToggle}>
+        {isDarkMode ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+      </button>
     </nav>
   );
 }
