@@ -15,7 +15,7 @@ function App() {
         <div className="content-container">
           <Routes>
             {/* “/” path → About Me (homepage) */}
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             {/* Detail page for a single project */}
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
