@@ -22,6 +22,16 @@
   --nav-text-color: #F9FAFB; /* new var for sidebar text */
 }
 
+.light-theme a {
+  color: var(--secondary-color); /* #3B82F6 */
+  text-decoration: none;
+}
+
+.light-theme a:hover {
+  color: var(--accent-color);    /* #34D399 */
+  text-decoration: underline;    /* optional hover effect */
+}
+
 /* Dark Theme: “Sophisticated Dark Mode” */
 .dark-theme {
   --bg-color: #21252B;       /* background */
@@ -29,6 +39,16 @@
   --secondary-color: #61DAFB;/* accent (blue) */
   --accent-color: #E06C75;   /* accent (red) */
   --text-color: #FFFFFF;     /* text */
+}
+
+.dark-theme a {
+  color: var(--secondary-color); /* #61DAFB */
+  text-decoration: none;
+}
+
+.dark-theme a:hover {
+  color: var(--accent-color);    /* #E06C75 */
+  text-decoration: underline;    /* optional hover effect */
 }
 
 /* Now style the app container and child elements using these vars */
