@@ -18,7 +18,7 @@ function Contact() {
         </a>
       </p>
       <p>
-        GitHub: 
+        GitHub:
         <a
           href="https://github.com/amit0101"
           target="_blank"
