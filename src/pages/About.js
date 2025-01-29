@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholderImg from '../assets/images/about-placeholder.jpg';
+import placeholderImg from '../assets/images/amit.jpg';
 
 function About() {
   return (
