@@ -56,14 +56,17 @@ function ContactForm() {
     setSubmitStatus('sending');
     
     try {
-      // Using EmailJS service to send emails without a backend
-      // You'll need to sign up for EmailJS and configure your template
-      const response = await fetch('https://formspree.io/f/xnnpqvov', {
+      // Replace 'your-formspree-id' with your actual Formspree form ID
+      const response = await fetch('https://formspree.io/f/xqkqyqyq', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, message }),
+        body: JSON.stringify({ 
+          email, 
+          message,
+          _subject: `New message from ${email} via Portfolio`
+        }),
       });
       
       if (response.ok) {

@@ -5,6 +5,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import DemoApps from './pages/DemoApps';
+import ContactForm from './components/ContactForm';
 import './index.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+        <ContactForm />
       </div>
     </Router>
   );
