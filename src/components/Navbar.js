@@ -17,6 +17,9 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
           <NavLink to="/projects">Projects</NavLink>
         </li>
         <li>
+          <NavLink to="/demos">Demo Apps</NavLink>
+        </li>
+        <li>
           <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
